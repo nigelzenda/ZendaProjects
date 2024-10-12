@@ -1,6 +1,6 @@
 body {
-    background-color: #59CD90;
-    color: #3FA7D6;
+    background-color: #a1a1a1;
+    color: #1d546d;
     font-family: "Fjalla One", Arial;
   }
   
@@ -21,7 +21,7 @@ body {
     padding: 2%;
     height: 90vh;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 40px;
+    border-radius: 20px;
     text-align: center;
   }
   
