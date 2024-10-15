@@ -9,16 +9,25 @@
      So this is the style so you have to create a style tag and add it into the header since it is universal to the page
     -->
     <style>
+        
         .allheadings{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: brown;
             background-color: azure;
+            padding: 5px;
         }
+        #bckgrnd{
+            background-color: darkkhaki;
+            padding: 20px;
+        }
+
     </style>
 </head>
 
 <body>
-    <h1>Base for the Udemy Course. </h1>
+    <!-- Lets create a section where all its elements are set under a certain stylled background using ID in <head>-->
+<section id="bckgrnd">
+        <h1>Base for the Udemy Course. </h1>
 <div id="classed" class="allheadings">
     <h2>This is a heading under a class</h2>
     <p>The above heading is nested under a class with a specific css styling.
@@ -34,5 +43,6 @@
 
 <!-- However I can apply to this seperate paragraph or any other element as I please by stating the class-->
  <p class="allheadings">This is a paragraph with the style aapplied to it</p>
+</section>
 </body>
 </html>
