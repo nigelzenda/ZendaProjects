@@ -4,9 +4,32 @@
     <meta lang="en">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Welcome Page</title>
+
+    <!-- Lets add a general CSS class with simple formating then reference it in the body
+     So this is the style so you have to create a style tag and add it into the header since it is universal to the page
+    -->
+    <style>
+        .allheadings{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: brown;
+            background-color: azure;
+        }
+    </style>
 </head>
 
 <body>
-Base for the Udemy Course. 
+    <h1>Base for the Udemy Course. </h1>
+<div id="classed" class="allheadings">
+    <h2>This is a heading under a class</h2>
+    <p>The above heading is nested under a class with a specific css styling.
+        This paragraph is also a part of it and we are about to see if it will also be affected or not.</p>
+</div>
+<br>
+<hr>
+<br>
+<div id="notclassed">
+    <h2>This is an unstyled classed heading</h2>
+    <p>We will see if this section will not be affected since it is not nested under any class.</p>
+</div>
 </body>
 </html>
