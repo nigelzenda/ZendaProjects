@@ -8,6 +8,11 @@
      So this is the style so you have to create a style tag and add it into the header since it is universal to the page
     -->
     <style>
+        .welcomeremarks{
+            align-content: center;
+            padding: 10px 60px;
+            text-align: center;
+        }
         /* All headings to have the same colour under this class */
         .headings{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,9 +20,10 @@
             background-color: azure;
             padding: 5px;
         }
-        .centerheading{
-            text-align: center;
+        .welcomeheader{
+            font-size: 35px;
         }
+
         /* Background for fun */
         #bckgrnd{
             background-color: darkkhaki;
@@ -58,6 +64,17 @@
         color: rgb(252, 13, 13);
         
       }
+
+      .imagelogos{
+        width: 200px;
+        display:flex;
+        gap: 50px;
+        align-items: center;
+              }
+
+    .form{
+        
+    }
     </style>
 </head>
 
@@ -75,35 +92,52 @@
 
 <body>
     <main>
-      <h1 class="centerheading">Dyse Unlimited Feedback App</h1>
+        <section id="welcomeremarks" class="welcomeremarks">
+      <h1 class="welcomeheader">Dyse Unlimited Feedback App</h1>
+      <p>Welcome to our Feedback App and thank you for visiting <a target="_blank" href="https://sites.google.com/view/dyseunlimited">Dyse Unlimited</a> website and we hope you loved the tour of our awesome catalogue and gallery. We appreciate you taking part in this short survey on our services.
+          Please note that this information is confidential and will not be shared externally but will only be used to help us evaluate our service provision and assist us in planning to provide you the best we can offer.
+        <strong>Customer satifaction</strong> is our <em>daily routine.</em></p>
+      <div id="imagelogos" class="imagelogos">
+        <figure>
+        <a href="https://sites.google.com/view/dyseunlimited" target="_blank"><img src="/RXDZIUZo_400x400.jpg" alt="Dyse unlimited logo" width="200px"></a> 
+    </figure>
+    <figure>
+        <a href="https://sites.google.com/view/dyseunlimited/photography" target="_blank"><img src="/Dyse Official Logo Black White Background.png" alt="Dyse unlimited Photography logo" width="200px"></a>
+      <figcaption>Our <em>photography</em> division</figcaption>  
+    </figure>
 
-      <section>
+    <figure>
+        <a href="https://sites.google.com/view/dyseunlimited/graphics" target="_blank"><img src="/Dyse Graphics1.png" alt="Dyse unlimited Graphics logo" width="200px" ></a>
+        <figcaption>Our <em>graphics</em> division</figcaption>  
+    </figure>
+    
+    </div>    
+    </section>
+
+    <h2>Enter Your Feedback</h2>
+    <section>
         <h2 id="mydetails" class="headings">Personal Details:</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Thank you for visiting <a target="_blank" href="https://sites.google.com/view/dyseunlimited">Dyse Unlimited</a> website and we hope you looked at our gallery.</p>
-        <a href="https://sites.google.com/view/dyseunlimited/photography"><img src="/Practice/Feedback App/files/Dyse Official Logo Black White Background.png" alt="Dyse unlimited logo"></a>
-      </section>
-      <section>
-        <h2>Different Sections On the website</h2>
-        <ul>
-          <li>Graphics</li>
-          <li>Photography</li>
-          <li>Labs(Web Development)</li>
-        </ul>
-         <figure>
-          <img src="/Practice/Feedback App/files/Dyse Graphics1.png" alt="Graphics Division">
-          <figcaption>Our <em>graphics</em> division</figcaption>  
-        </figure>
-      <section>
-        <h2>Enter Your Feedback</h2>
-        <form action="/Practice/Feedback App/receiveddata.html" type="POST">
-          <label><input type="text" name="name" placeholder="full name" required>Name:*</label>
-          <label><input type="text" name="emailaddress" placeholder="email" required>Email Address:*</label>
-          <label><input type="number" name="phonenumber" placeholder="phone number" required>Email Address:*</label>
-          
+        
+        <form id="form" action="/Practice/Feedback App/receiveddata.html" type="POST">
+          <label for="name">Name:*</label>
+          <input type="text" id="name" name="name" placeholder="full name" required>
+            <br>
+            <br>
+          <label for="emailaddress">Email Address:*</label>
+            <input type="email" id="emailaddress" name="emailaddress" placeholder="email" required minlength="3" maxlength ="15">
+            <br>
+            <br>
+          <label for="phonenumber">Phone Number:*</label>
+          <input type="text" id="phonenumber" name="phonenumber" placeholder="phone number" required minlength="3" maxlength ="15">
+            <br>
+            <br>
           <button type="submit">Submit</button>
         </form>
-      </section>
+        <br>
+
+    </section>
+
     </main>
   </body>
 </html>
