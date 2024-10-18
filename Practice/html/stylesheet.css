@@ -1,0 +1,95 @@
+
+        .welcomeremarks{
+            align-content: center;
+            padding: 10px 60px;
+            text-align: center;
+        }
+        /* All headings to have the same colour under this class */
+        .headings{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: brown;
+            background-color: azure;
+            padding: 5px;
+        }
+        .welcomeheader{
+            font-size: 35px;
+        }
+
+        /* Background for fun */
+        #bckgrnd{
+            background-color: darkkhaki;
+            padding: 20px;
+        }
+        /* Header/Menu Area to have the following style */
+        header{
+            background-color: #ffffff;
+            font-weight: bold;
+            display: flex; /* Aligns image and nav links inline */
+            justify-content: space-between; /* Space between logo and nav links */
+            align-items: center; /* Vertically aligns items */
+            padding: 10px 20px;
+            border-style: solid;
+            border-color: rgb(236, 236, 236);
+            border-radius: 10px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+              }
+
+      .logo {
+        height: 50px; /* Adjust size of the logo */
+      }
+
+      nav ul {
+        list-style-type: none; /* Remove bullet points */
+        display: flex; /* Make the list horizontal */
+        gap: 30px; /* Spacing between items */
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+
+      nav ul li a:hover {
+        color: rgb(252, 13, 13);
+        
+      }
+
+      .imagelogos{
+        width: 200px;
+        display:flex;
+        gap: 50px;
+        align-items: center;
+              }
+
+    .formcontainer{
+      background-color: rgb(245, 245, 245);
+      border-radius: 10px;
+      padding: 20px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: rgb(214, 214, 214);
+            
+    }
+/* trying to make the submit button have a hover color... maybe later
+    input[type="submit"]: hover{
+background-color: tomato;
+    }*/
+
+/* Lets select an exact link from the webpage and change its color to orange*/
+a[href="https://sites.google.com/view/dyseunlimited"] {
+  color: orange;
+}
+/* If we wanted to change ALL links with the word contact in their reference to the color blue that would have been like*/
+a[href*="contact"] {
+    color: rgb(12, 68, 253);
+  }
+/* Lets add a pseudo code to all <a> elements to make them turn orange on hover*/
+a:hover{
+    color:rgb(253, 12, 12);
+
+}
