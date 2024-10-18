@@ -1,7 +1,7 @@
 
 /* An "element" is selected directly just by writing their names like "element{xxx;}"  */
 /* Adding multiple elements to one similar formatting */
-h1, h2, h5 {
+h1, h2, h5, article {
     text-align: center;
 }
 /*Adding a background image to the whole page*/
@@ -29,3 +29,16 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+ /* Lets align services to the left and prices to the right */
+ .service {
+    text-align: left;
+ }
+ .price{
+    text-align: right;
+ }
+
+ /* Making paragraphs stay in one line per article and not behave like blocl level elements as they are to take up the whole line*/
+ .oneline p {
+        display: inline-block
+ }
