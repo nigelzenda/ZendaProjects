@@ -11,8 +11,9 @@
 </head>
 
 <header class="header">
-    <img src="/Dyse Official Logo Black White Background.png" alt="Dyse Unlimited Logo" class="logo">
+    <img src="/Dyse Official Logo Black White Background.png" alt="Dyse Unlimited Logo" class="logo grow">
 <!-- Lets add a list of menu items to navigate out Webpage-->
+ <!-- Create a class for the main list ul and style the nested elements li (descendants) of ul-->
     <nav>
       <ul>
         <li><a href="#mydetails">My Details</a></li>
@@ -29,28 +30,33 @@
       <p>Welcome to our Feedback App and thank you for visiting <a target="_blank" href="https://sites.google.com/view/dyseunlimited">Dyse Unlimited</a> website and we hope you loved the tour of our awesome catalogue and gallery. We appreciate you taking part in this short survey on our services.
           Please note that this information is confidential and will not be shared externally but will only be used to help us evaluate our service provision and assist us in planning to provide you the best we can offer.
         <strong>Customer satifaction</strong> is our <em>daily routine.</em></p>
+
+      
+
+
       <div id="imagelogos" class="imagelogos">
         <figure>
-        <a href="https://sites.google.com/view/dyseunlimited" target="_blank"><img src="/RXDZIUZo_400x400.jpg" alt="Dyse unlimited logo" width="200px"></a> 
+        <a href="https://sites.google.com/view/dyseunlimited" target="_blank"><img src="/RXDZIUZo_400x400.jpg" class="grow" alt="Dyse unlimited logo" width="200px"></a> 
     </figure>
     <figure>
-        <a href="https://sites.google.com/view/dyseunlimited/photography" target="_blank"><img src="/Dyse Official Logo Black White Background.png" alt="Dyse unlimited Photography logo" width="200px"></a>
+        <a href="https://sites.google.com/view/dyseunlimited/photography" target="_blank"><img src="/Dyse Official Logo Black White Background.png" class="grow" alt="Dyse unlimited Photography logo" width="200px"></a>
       <figcaption>Our <em>photography</em> division</figcaption>  
     </figure>
 
     <figure>
-        <a href="https://sites.google.com/view/dyseunlimited/graphics" target="_blank"><img src="/Dyse Graphics1.png" alt="Dyse unlimited Graphics logo" width="200px" ></a>
+        <a href="https://sites.google.com/view/dyseunlimited/graphics" target="_blank"><img src="/Dyse Graphics1.png" class="grow" alt="Dyse unlimited Graphics logo" width="200px" ></a>
         <figcaption>Our <em>graphics</em> division</figcaption>  
     </figure>
     
     </div>    
     </section>
 
-    <h2>Enter Your Feedback</h2>
+    <h2 class="division">Enter Your Feedback</h2>
+
+
     <section>
-        <h2 id="mydetails" class="headings">Personal Details:</h2>
-        <!-- TODO: Add link to cat photos -->
-        <div class="formcontainer">
+      <div class="formcontainer">
+          <h2 id="mydetails" class="headings">Personal Details:</h2>
         <form id="form" action="/Practice/Feedback App/receiveddata.html" type="POST">
           <label for="name">Name:*</label>
           <input type="text" id="name" name="name" placeholder="full name" required>
@@ -64,7 +70,7 @@
           <input type="text" id="phonenumber" name="phonenumber" placeholder="phone number" required minlength="3" maxlength ="15">
             <br>
             <br>
-          <label for="gender">Sex:</label>
+          <label for="gender">Gender:</label>
            <!-- We will provide options for the user to choose from using a dropdown. This can be done using options under the select tag-->
             <select id="gender" name="gender" placeholder="gender">
               <option value="Male">Male</option>
@@ -79,7 +85,8 @@
 
 <!--THIS SECTION IS THE SURVEY SECTION-->
 <section id="surveysection" class="survey">
-  <h2 id="mydetails" class="headings">Survey Responses:</h2>
+  <!-- Good example of Specificity. ID will be selected, since IDs are the most specific selector in CSS, followed by classes, and finally, type-->
+  <h2 class="headings" id="mydetails" >Survey Responses:</h2>
 
   <label for="division">Which Dyse Unlimited division did you like?</label>
   <select name="division" id="division">
@@ -162,23 +169,27 @@
         </form>
         </div>
         <br>
-
     </section>
-
-
     </main>
+
+    
+<!-- Background image and caption centered-->
+    <div class='image'>
+      <p class='caption'>An all in one web & media solutions company</p>
+    </div>
+    
+    <footer>
+      <div id="footer" class="footer">
+        <table>
+          <tr>
+            <td>&copy;Dyse Unlimited</td>
+            <td>&reg;2024</td>
+            <td><a href="https://sites.google.com/view/dyseunlimited/contact-us">Contact Us</a></td>
+          </tr>
+        </table>
+      </div>
+    </footer>
   </body>
 
-
-  <footer>
-    <div id="footer" class="footer">
-      <table>
-        <tr>
-          <td>&copy; Dyse Unlimited</td>
-          <td>&reg;2024</td>
-          <td><a href="https://sites.google.com/view/dyseunlimited/contact-us">Contact Us</a></td>
-        </tr>
-      </table>
-    </div>
-  </footer>
+ 
 </html>

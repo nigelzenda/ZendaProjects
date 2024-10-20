@@ -6,9 +6,7 @@
         }
         /* All headings to have the same colour under this class */
         .headings{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: brown;
-            background-color: azure;
             padding: 5px;
         }
         .welcomeheader{
@@ -36,10 +34,39 @@
             border-right: 0px;
               }
 
+/* A Division can be set to a particulat background with ease. We can reference a color or a url of an image*/
+.image {
+  background-image: url("/roberto-nickson-Gvm2wM3V5PA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 300px;
+
+}
+
+
+.caption{
+
+text-align: center;
+display: block;
+margin-left: 15%;
+margin-right: 15%;
+  padding: 30px;
+  
+  position:sticky;
+  border-radius: 7px;
+  top: 70%;
+  width: 50%;
+  background-color: white;
+  opacity: 0.7;
+  color: black;
+}
+
       .logo {
         height: 50px; /* Adjust size of the logo */
       }
-
+/* An example of Descendants. ul is a descendant of the element nav*/
+/* In short we are targeting nav list*/
       nav ul {
         list-style-type: none; /* Remove bullet points */
         display: flex; /* Make the list horizontal */
@@ -47,18 +74,42 @@
         padding: 0;
         margin: 0;
       }
-
-      nav ul li a {
+/* An example of Descendants. a is nested under li which is nested under ul which is also nested under nav. they are all descendants*/
+      /* In short we are targeting nav menu items*/
+        nav ul li a {
         text-decoration: none;
-        color: black;
+        color: rgb(0, 0, 0);
         font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        
+      /* In short we are targeting nav menu list to grow when we hover a mouse. Good example of a Specific descendant targeted*/
+      nav ul li:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out;
       }
-
+/* In short we are targeting nav menu items behavior on hover*/
       nav ul li a:hover {
         color: rgb(252, 13, 13);
         
       }
+/* That said, lets create a selector for a hover class that can be applied to any element, although initially I want it to work on images*/
+.grow:hover {
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+}
 
+main {
+  display:block;
+  /* Lets center the items by adding margins*/
+  width:fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  border-radius: 10px;
+  
+
+}
       .imagelogos{
         width: 200px;
         display:flex;
@@ -93,3 +144,34 @@ a:hover{
     color:rgb(253, 12, 12);
 
 }
+
+/* Demonstration of Chaining. Having 2 selectors styling a particular element in html file*/
+h2.division {
+  color: brown;
+  text-align: center;
+}
+
+/* Multiple selectors are selected by a coma to avoid repetetive code for instance lets style font for headings */
+h2, h1, .headings {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p, form, figcaption, footer  {
+  font-family: Helvetica, Arial, sans-serif;
+
+}
+
+footer{
+  text-align: center;
+  vertical-align: center;
+  max-width: 70%;
+  align-items: center;
+  height: 30px;
+  margin-top: 20px;
+  
+}
+
+table{
+  width: 100%;
+}
+
