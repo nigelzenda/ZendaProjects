@@ -4,41 +4,120 @@
 h1, h2, h5, article {
     text-align: center;
 }
-/*Adding a background image to the whole page*/
+/*Adding a background image to the whole page. Adding overal main font*/
 body{
     background-image:url(/images/roberto-nickson-EEiyMPBG3R8-unsplash.jpg);
+    background-attachment: fixed;
+    font-family:sans-serif ;
+    padding: 30px;
+    
 }
 
+/* Make the all in one text italic by creating a selector for it then creating a class under its h5 element*/
+.ai1 {
+    font-style: italic;
+}
 
-/* To select an "id" we use the # like "#idname{xxxx;}". So now lets style the id="services" element(s) by selecting #services  */
+/* Adding headings font. A fallback font is added by using commas and adding the backup fonts incase browser doesnt load it*/
+h1, h2{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  h1 {
+    font-size: 45px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+hr{
+    height: 2px;
+    background-color: rgb(163, 163, 163);
+    /*The default value of a property named border-width is 1px for all edges of hr elements. So always remove 2px to all your height px*/
+    border-color: rgb(163, 163, 163);
+}
+
+/* Lets make the images to behave like block elements like theor respective headers and not act like inline elements as they are*/
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+  }
+
+
+/* To select a "class" we use the . like ".classname{xxxx;}". So now lets style the .class="services" element(s) by selecting .services  */
 /*Setting the width of the services area to 80% of the parent body and adding antiquewhite background to it after commenting it out on body*/
-#services{
+.services {
     width: 80%;
+    /* The above width will stretch the items too far apart cz of the 80% so lets set a max width*/
+    max-width: 800px;
     background-color: antiquewhite;
     /* Lets center the #services by adding margins*/
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 
-/* Now lets select a "class" by using the format ".classname". lets add a diff section with this */
-.services2 {
+/* Now lets select an "id" we use the # like "#idname{xxxx;}".. lets add a diff section with this */
+#services2 {
     width:auto;
-    background-color: rgb(255, 243, 230);
-    /* Lets center the #services by adding margins*/
+   /* background-color: rgb(255, 255, 255); */
+    padding: 10px;
+    /* Lets center the #services by adding margins
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;*/
 }
 
  /* Lets align services to the left and prices to the right */
- .service {
+ .photography, .graphics {
     text-align: left;
+    width:50%;
  }
  .price{
     text-align: right;
+    width:50;
  }
 
  /* Making paragraphs stay in one line per article and not behave like blocl level elements as they are to take up the whole line*/
  .oneline p {
-        display: inline-block
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 18px;
  }
+
+ .footerline {
+    max-width: 70%;
+    margin-top: 25px;
+ }
+
+ /* FOOTER*/
+ footer {
+    font-size: 14px;
+    text-align: center;
+  }
+/* To keep the color the same for liks on footer*/
+ footer a {
+    color: black;
+  }
+  /* If link already visited, turn grey*/
+  a:visited 
+  { color: rgb(0, 0, 0); 
+}
+  a:hover 
+  { color: rgb(240, 11, 11); 
+}
+/* when link actually being clicked change to white*/
+a:active
+{ color: rgb(255, 255, 255); 
+}
+
+.portfolio{
+    margin-bottom: 4px;
+}
